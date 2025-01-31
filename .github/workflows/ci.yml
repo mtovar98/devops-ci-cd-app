@@ -1,4 +1,4 @@
-name: CI - Pruebas Automáticas
+name: CI/CD - Pruebas y Despliegue Automático
 
 on:
   push:
@@ -26,3 +26,16 @@ jobs:
 
       - name: 🧪 Ejecutar pruebas con Jest
         run: npm test
+
+  deploy:
+    needs: test # 🔥 Solo se ejecuta si "test" pasa exitosamente
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: 🚀 Desplegar en Vercel
+        run: |
+          npm install -g vercel
+          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
