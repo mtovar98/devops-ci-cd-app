@@ -1,0 +1,28 @@
+{
+  "name": "devops-ci-cd-app",
+  "version": "1.0.0",
+  "description": "Proyecto de prueba para implementar DevOps con CI/CD en una aplicación Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtovar98/devops-ci-cd-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtovar98/devops-ci-cd-app/issues"
+  },
+  "homepage": "https://github.com/mtovar98/devops-ci-cd-app#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
